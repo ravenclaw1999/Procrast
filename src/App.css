@@ -1,33 +1,159 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond|Hepta+Slab|Zilla+Slab+Highlight&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+
+.homePage {
   text-align: center;
+  font-size: 150%;
+  color: white;
+  flex: 1;
+  margin: 0px;
+  background-image:url(https://www.lifeofpix.com/wp-content/uploads/2019/08/DJI_0452-1600x1057.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.App main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+  /*
+  
+  font-weight: bold;
+  
+  
+  -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #ffffff;}
+    25%  {background: #ccffff;}
+    50%  {background: #66ffff;}
+    75%  {background: #00ffff;}
+    100% {background: #33cccc;}
+}
+@keyframes colorchange {
+     0%  {background: #00ffcc;}
+    25%  {background: #00ff99;}
+    50%  {background: #66ff99;}
+    75%  {background: #99ff99;}
+    100% {background: #99ff99;}
+}
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.App main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+*/
+
+.homePageTitle {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-size: 550%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.slogan {
+  font-size: 160%;
+  font-family: 'Dancing Script', cursive;
+}
+
+.img {
+  width: 4%;
+}
+
+.description {
+  font-size: 110%;
+  font-family: 'Hepta Slab', serif;
+}
+
+.welcomePage {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+  font-size: 160%;
+  color: white;
+  
+ -webkit-animation: colorchange 30s infinite; 
+    animation: colorchange 30s infinite;
+}
+
+@keyframes colorchange {
+    0%  {
+       background-image:linear-gradient(to right, #F8B195, #F67280, #C06C84,  #6C5B7B, #355C7D );
+     }
+    25%  {
+       background-image:linear-gradient(to right, #205072, #329D96 , #56C596, #7BE495, #CFF4D2 )
+    }
+    50% {
+      background-image:linear-gradient(to right, #cc6600, #ff6699 )
+    }
+    75%  {
+      background-image:linear-gradient(to right, #FE4365, #FC9D9A , #F9CDAD , #C8C8A9, #83AF9B )
+    }
+    100% {
+      background-image:linear-gradient(to right, #003399, #33cc33  )
+    }
+} 
+
+.welcomePageTitle {
+  font-family: 'Zilla Slab Highlight', cursive;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.descriptionTwo {
+  font-size: 100%;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loginButton {
+  position: absolute;
+  top: 50%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 13px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
+
+.loginButton:hover{
+  background-color: black;
+  color: white;
+}
+
+.input {
+  color: white;
+}
+
+.addButton {
+  text-align: center;
+  background-color:white;
+  color: black;
+  cursor: pointer;
+  padding: 10px 5px;
+}
+
+.addButton:hover{
+  background-color: black;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.myProjects {
+  font-size: 120%;
+}
+
