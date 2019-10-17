@@ -258,7 +258,7 @@ function FullNavbar(props) {
           {
           !props.user &&
           <button onClick={props.signin} className="loginButton">
-             Loginnn
+             Login
           </button>
           }
       </div>
