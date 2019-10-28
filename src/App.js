@@ -116,7 +116,7 @@ export default class App extends React.Component {
         <Router>
         <main>
           <FullNavbar signout={this.signOutUser} user={this.state.user} signin={this.signInUser}/>
-          <Route exact path="/" component={ () => <Home user={this.state.user} />} />
+          <Route exact path="/" render={(props) => <Home {...props} user={this.state.user} />} />
          {/* <Route path="/login" component={() => <Login user={this.state.user} signin={this.signInUser}  />} /> */}
           <Route path="/welcome" component={() => <WelcomePage user={this.state.user} projects={this.state.myProjects} getProjects={this.getProjectsFromFirebase} />} />
         </main>
