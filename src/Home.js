@@ -16,7 +16,7 @@ export default function Home(props) {
       </div>
 
       <div className="home-text container">
-        <h3>About</h3>
+        <h3 className="about">About</h3>
         <div className="row">
           <p className="col">Although we don't want to admit it, we all procrastinate.
           Procrastination is something that hunts us all. But life's too short to

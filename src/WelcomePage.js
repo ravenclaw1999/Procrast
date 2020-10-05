@@ -11,10 +11,6 @@ class WelcomePage extends Component {
   handleChange = event => {
     const value = event.target.value;
     const name = event.target.name;
-    // const time = event.target.time
-    // const date = event.target.date
-    // const deadline = event.target.deadline
-    // const description = event.target.description
     this.setState({ [name]: value });
   };
 
@@ -44,35 +40,6 @@ class WelcomePage extends Component {
       })
       .catch(err => console.log(err));
   };
-
-  // getProjectsFromFirebase = (uid) => {
-  //   db.collection('projects')
-  //     .where('id', '==', uid)
-  //     .get()
-  //     .then( snapshot => {
-  //       const myProjects = []
-  //       snapshot.forEach (project => {
-  //         const data = project.data
-  //         myProjects.push(data)
-
-  //       })
-  //         this.setState({myProjects:myProjects})
-  //     })
-  //     .catch( error => console.log(error))
-  // }
-
-  // static getDerivedStateFromProps(props, state)  {
-  //   if (props.user && props.user.uid) {
-  //     this.getProjectsFromFirebase(props.user.uid)
-  //   }
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   // Typical usage (don't forget to compare props):
-  //   if (this.props.user && this.props.user.uid) {
-  //     this.getProjectsFromFirebase(this.props.user.uid)
-  //   }
-  // }
 
   render() {
     const { props } = this;
@@ -111,22 +78,24 @@ class WelcomePage extends Component {
           {this.props.projects &&
             this.props.projects.map(project => {
               return (
-                <div>
-                  <h2>Project Name: {project.name}</h2>
-                  <br />
-                  <p>Time for Project: {project.time} days</p>
-                  <br />
-                  <p>Date: {true && project.date.toDate().toString()}</p>
-                  <br />
-                  <p>
-                    Deadline: {true && project.deadline.toDate().toString()}
-                  </p>
-                  <br />
-                  <p>Description of Project: {project.description}</p>
-                </div>
+                <div className="welcomePage">
+                    <div className="container">
+                      <div className="card" style= {{width: "18rem"}}>
+                            <div className="card-body">
+                              <h5 className="card-title">Project Name: {project.name}</h5>
+                              <h6 className="card-subtitle mb-2 text-muted">Time for Project: {project.time}</h6>
+                              <p className="card-text">Date: {true && project.date.toDate().toString()}</p>
+                              <p className="card-text">Deadline: {true && project.deadline.toDate().toString()}</p>
+                              <p className="card-text">Deadline: Description of Project: {project.description}</p>
+                              <a href="#" className="card-link">Edit</a>
+                              <a href="#" className="card-link">Delete</a>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
               );
             })}
-          <p className="descriptionTwo">
+          <p className="descriptionTwo container">
             <br /> <br /> <br />
             Insert in info about a new project or goal, and we will notify you
             the maximum procrastination time you have on your hand through

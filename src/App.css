@@ -7,7 +7,7 @@ body, html {
   margin: 0;
   font-family: 'Zilla Slab', serif;
   text-align: center;
-  background-color: #ccffcc;
+  background: linear-gradient(to right, #ccffcc 0%, #99ffcc 100%);
 }
 
 .img {
@@ -52,14 +52,13 @@ body, html {
   letter-spacing: 10px;
 }
 
-h3 {
+.about {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #111;
   font-size: 50px;
 }
 
-/* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1024px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
@@ -67,7 +66,6 @@ h3 {
 }
 
 .home-text{
-  background-color: #ccffcc;
   padding: 50px 80px;
   font-size: 20px;
 }
@@ -122,41 +120,26 @@ h3 {
 
 .welcomePage {
   text-align: center;
-  font-family: 'Righteous', cursive;
-  font-size: 160%;
-  color: white;
-  
- -webkit-animation: colorchange 30s infinite; 
-    animation: colorchange 30s infinite;
+  font-family: 'Zilla Slab', serif;
+  font-size: 20px;
+  color: black;
 }
-
-@keyframes colorchange {
-    0%  {
-       background-image:linear-gradient(to right, #F8B195, #F67280, #C06C84,  #6C5B7B, #355C7D );
-     }
-    25%  {
-       background-image:linear-gradient(to right, #205072, #329D96 , #56C596, #7BE495, #CFF4D2 )
-    }
-    50% {
-      background-image:linear-gradient(to right, #cc6600, #ff6699 )
-    }
-    75%  {
-      background-image:linear-gradient(to right, #FE4365, #FC9D9A , #F9CDAD , #C8C8A9, #83AF9B )
-    }
-    100% {
-      background-image:linear-gradient(to right, #003399, #33cc33  )
-    }
-} 
 
 .welcomePageTitle {
   font-family: 'Zilla Slab Highlight', cursive;
-  color: white;
+  font-size: 60px;
 }
 
 .descriptionTwo {
-  font-size: 100%;
-  color: white;
+  left: 0;
+  top: 40%;
+  width: 100%;
 }
+
+.description span.border {
+  color: #fff;
+  padding: 18px;
+} 
 
 .loginButton {
   position: absolute;
@@ -175,10 +158,6 @@ h3 {
 
 .loginButton:hover{
   background-color: black;
-  color: white;
-}
-
-.input {
   color: white;
 }
 
