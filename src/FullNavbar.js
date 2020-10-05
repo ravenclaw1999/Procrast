@@ -7,7 +7,7 @@ import {
 export default function FullNavbar(props) {
     return (
       <Navbar bg="light" expand="lg">
-       <img className="img" src="https://thumbs.dreamstime.com/b/productivity-increase-black-icon-vector-sign-isolated-background-productivity-increase-concept-symbol-illustration-productivity-133183535.jpg" />
+       <img className="img" src="https://www.freelogodesign.org/file/app/client/thumb/4848dab3-769b-487d-82ab-38c922ce78c4_200x200.png?1601861043792" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
           </Nav>

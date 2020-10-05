@@ -1,54 +1,96 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|EB+Garamond|Hepta+Slab|Zilla+Slab+Highlight&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap');
 
-
-.homePage {
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Zilla Slab', serif;
   text-align: center;
-  font-size: 150%;
-  color: white;
-  flex: 1;
-  margin: 0px;
-  background-image:url(https://www.lifeofpix.com/wp-content/uploads/2019/08/DJI_0452-1600x1057.jpg);
+  background-color: #ccffcc;
+}
+
+.img {
+  width: 20%;
+}
+
+.bgimg-1, .bgimg-2 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
+.bgimg-1 {
+  background-image: url("https://images.unsplash.com/photo-1565118531796-763e5082d113?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  min-height: 110%;
+}
+
+.bgimg-2 {
+  background-image: url("https://images.unsplash.com/photo-1565118531796-763e5082d113?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  min-height: 200px;
+}
+
+.second-caption {
+  font-family: 'Dancing Script', cursive;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.caption span.border {
+  color: #fff;
+  padding: 18px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #111;
+  font-size: 50px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+.home-text{
+  background-color: #ccffcc;
+  padding: 50px 80px;
+  font-size: 20px;
+}
+
+.smaller-img {
+  background-color:transparent;
+  font-size:25px;
+  color: #f7f7f7;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.header {
+  font-size: 100px;
+}
+
 .App {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-.App main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-  /*
-  
-  font-weight: bold;
-  
-  
-  -webkit-animation: colorchange 60s infinite; 
-    animation: colorchange 60s infinite;
-}
-@-webkit-keyframes colorchange {
-     0%  {background: #ffffff;}
-    25%  {background: #ccffff;}
-    50%  {background: #66ffff;}
-    75%  {background: #00ffff;}
-    100% {background: #33cccc;}
-}
-@keyframes colorchange {
-     0%  {background: #00ffcc;}
-    25%  {background: #00ff99;}
-    50%  {background: #66ff99;}
-    75%  {background: #99ff99;}
-    100% {background: #99ff99;}
-}
-.App {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
+
 .App main {
   display: flex;
   flex-direction: column;
