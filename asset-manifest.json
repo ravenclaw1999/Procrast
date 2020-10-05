@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Procrast/static/css/main.239fbc1d.chunk.css",
-    "main.js": "/Procrast/static/js/main.a4dfd8e1.chunk.js",
-    "main.js.map": "/Procrast/static/js/main.a4dfd8e1.chunk.js.map",
+    "main.css": "/Procrast/static/css/main.aacf1d8f.chunk.css",
+    "main.js": "/Procrast/static/js/main.fac90b13.chunk.js",
+    "main.js.map": "/Procrast/static/js/main.fac90b13.chunk.js.map",
     "runtime~main.js": "/Procrast/static/js/runtime~main.edd8e6d0.js",
     "runtime~main.js.map": "/Procrast/static/js/runtime~main.edd8e6d0.js.map",
     "static/css/2.ca8e03c8.chunk.css": "/Procrast/static/css/2.ca8e03c8.chunk.css",
     "static/js/2.cac21c97.chunk.js": "/Procrast/static/js/2.cac21c97.chunk.js",
     "static/js/2.cac21c97.chunk.js.map": "/Procrast/static/js/2.cac21c97.chunk.js.map",
     "index.html": "/Procrast/index.html",
-    "precache-manifest.b125e31af42a9cb917fb86f90f17e900.js": "/Procrast/precache-manifest.b125e31af42a9cb917fb86f90f17e900.js",
+    "precache-manifest.10bc8493dec2f46cc591f494582007f2.js": "/Procrast/precache-manifest.10bc8493dec2f46cc591f494582007f2.js",
     "service-worker.js": "/Procrast/service-worker.js",
     "static/css/2.ca8e03c8.chunk.css.map": "/Procrast/static/css/2.ca8e03c8.chunk.css.map",
-    "static/css/main.239fbc1d.chunk.css.map": "/Procrast/static/css/main.239fbc1d.chunk.css.map"
+    "static/css/main.aacf1d8f.chunk.css.map": "/Procrast/static/css/main.aacf1d8f.chunk.css.map"
   }
 }
