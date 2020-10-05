@@ -80,19 +80,23 @@ class WelcomePage extends Component {
               return (
                 <div className="welcomePage">
                     <div className="container">
-                      <div className="card" style= {{width: "18rem"}}>
-                            <div className="card-body">
-                              <h5 className="card-title">Project Name: {project.name}</h5>
-                              <h6 className="card-subtitle mb-2 text-muted">Time for Project: {project.time}</h6>
-                              <p className="card-text">Date: {true && project.date.toDate().toString()}</p>
-                              <p className="card-text">Deadline: {true && project.deadline.toDate().toString()}</p>
-                              <p className="card-text">Deadline: Description of Project: {project.description}</p>
-                              <a href="#" className="card-link">Edit</a>
-                              <a href="#" className="card-link">Delete</a>
-                            </div>
+                      <div className="row">
+                        <div className="col">
+                          <div className="card" style= {{width: "18rem"}}>
+                                  <div className="card-body">
+                                    <h5 className="card-title">Project Name: {project.name}</h5>
+                                    <h6 className="card-subtitle mb-2 text-muted">Time for Project: {project.time}</h6>
+                                    <p className="card-text">Date: {true && project.date.toDate().toString()}</p>
+                                    <p className="card-text">Deadline: {true && project.deadline.toDate().toString()}</p>
+                                    <p className="card-text">Deadline: Description of Project: {project.description}</p>
+                                    <a href="#" className="card-link">Edit</a>
+                                    <a href="#" className="card-link">Delete</a>
+                                  </div>
+                              </div>
+                          </div>
                         </div>
-                      </div>
-                  </div>
+                    </div>
+                </div>
               );
             })}
           <p className="descriptionTwo container">
