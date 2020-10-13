@@ -2,29 +2,24 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { db } from "./services/firebase";
+import ProjectForm from "./components/ProjectForm";
 
 class WelcomePage extends Component {
   state = {
-    myProjects: null
+    myProjects: null,
   };
 
-  handleChange = event => {
-    const value = event.target.value;
-    const name = event.target.name;
-    this.setState({ [name]: value });
-  };
-
-  saveProjectInFirebase = () => {
+  saveProjectInFirebase = (project) => {
     db.collection("projects")
       .add({
-        name: this.state.name,
-        time: this.state.time,
-        date: new Date(this.state.date),
-        deadline: new Date(this.state.deadline),
-        description: this.state.description,
-        id: this.props.user.uid
+        name: project.name,
+        time: project.time,
+        date: new Date(project.date),
+        deadline: new Date(project.deadline),
+        description: project.description,
+        id: this.props.user.uid,
       })
-      .then(res => {
+      .then((res) => {
         this.setState({});
         this.props.getProjects(this.props.user.uid);
         axios.post(
@@ -34,11 +29,11 @@ class WelcomePage extends Component {
             displayName: this.props.user.displayName,
             message: `
             Hello!
-            `
+            `,
           }
         );
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   };
 
   render() {
@@ -76,26 +71,42 @@ class WelcomePage extends Component {
           <br />
           <h3 className="myProjects myProjectsTitle">My Projects</h3>
           {this.props.projects &&
-            this.props.projects.map(project => {
+            this.props.projects.map((project) => {
               return (
                 <div className="welcomePage">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col">
-                          <div className="card" style= {{width: "18rem"}}>
-                                  <div className="card-body">
-                                    <h5 className="card-title">Project Name: {project.name}</h5>
-                                    <h6 className="card-subtitle mb-2 text-muted">Time for Project: {project.time}</h6>
-                                    <p className="card-text">Date: {true && project.date.toDate().toString()}</p>
-                                    <p className="card-text">Deadline: {true && project.deadline.toDate().toString()}</p>
-                                    <p className="card-text">Deadline: Description of Project: {project.description}</p>
-                                    <a href="#" className="card-link">Edit</a>
-                                    <a href="#" className="card-link">Delete</a>
-                                  </div>
-                              </div>
+                  <div className="container">
+                    <div className="row">
+                      <div className="col">
+                        <div className="card" style={{ width: "18rem" }}>
+                          <div className="card-body">
+                            <h5 className="card-title">
+                              Project Name: {project.name}
+                            </h5>
+                            <h6 className="card-subtitle mb-2 text-muted">
+                              Time for Project: {project.time}
+                            </h6>
+                            <p className="card-text">
+                              Date: {true && project.date.toDate().toString()}
+                            </p>
+                            <p className="card-text">
+                              Deadline:{" "}
+                              {true && project.deadline.toDate().toString()}
+                            </p>
+                            <p className="card-text">
+                              Deadline: Description of Project:{" "}
+                              {project.description}
+                            </p>
+                            <a href="#" className="card-link">
+                              Edit
+                            </a>
+                            <a href="#" className="card-link">
+                              Delete
+                            </a>
                           </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
               );
             })}
@@ -108,59 +119,7 @@ class WelcomePage extends Component {
             we are human at the end of the day, and we will need help along the
             way to defeat our own internal monsters.
           </p>
-          <p className="input">
-            <br />
-            Name:{" "}
-            <input
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.name}
-              type="text"
-            />
-          </p>
-          <p className="input">
-            <br />
-            Time (Days):{" "}
-            <input
-              name="time"
-              onChange={this.handleChange}
-              value={this.state.time}
-              type="number"
-            />
-          </p>
-          <p className="input">
-            <br />
-            Date:{" "}
-            <input
-              name="date"
-              onChange={this.handleChange}
-              value={this.state.date}
-              type="date"
-            />
-          </p>
-          <p className="input">
-            <br />
-            Deadline:{" "}
-            <input
-              name="deadline"
-              onChange={this.handleChange}
-              value={this.state.deadline}
-              type="date"
-            />
-          </p>
-          <p className="input">
-            <br />
-            Description:{" "}
-            <input
-              name="description"
-              onChange={this.handleChange}
-              value={this.state.description}
-              type="text"
-            />
-          </p>
-          <button onClick={this.saveProjectInFirebase} className="addButton">
-            Add Project
-          </button>
+          <ProjectForm onSave={this.saveProjectInFirebase} />
           <br />
           <br />
         </strong>
